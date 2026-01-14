@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Treinamento Corporativo In Company de Uso Progressivo da Força (UPF). Adequação à Lei 14.967/2024, redução de risco jurídico e conformidade para empresas de segurança.">
+    <title>UPF Compliance Program | Treinamento Corporativo In Company</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Oswald:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* =========================================
+           VARS & RESET
+           ========================================= */
+        :root {
+            --color-bg: #111111;
+            --color-surface: #1a1a1a;
+            --color-surface-hover: #252525;
+            --color-text: #f0f0f0;
+            --color-text-muted: #a0a0a0;
+            --color-gold: #c6a87c;
+            --color-gold-hover: #b09365;
+            --color-danger: #e53935;
+            --color-success: #43a047;
+            
+            --font-primary: 'Inter', sans-serif;
+            --font-heading: 'Oswald', sans-serif;
+            
+            --container-width: 1140px;
+            --section-padding: 80px 0;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-primary);
+            background-color: var(--color-bg);
+            color: var(--color-text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-heading);
+            font-weight: 700;
+            text-transform: uppercase;
+            line-height: 1.2;
+            color: #ffffff;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            width: 90%;
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        /* =========================================
+           COMPONENTES
+           ========================================= */
+        .btn {
+            display: inline-block;
+            padding: 16px 32px;
+            background-color: var(--color-gold);
+            color: #000;
+            font-weight: 700;
+            text-transform: uppercase;
+            border-radius: 4px;
+            font-family: var(--font-heading);
+            transition: var(--transition);
+            cursor: pointer;
+            border: none;
+            text-align: center;
+            letter-spacing: 0.5px;
+        }
+
+        .btn:hover {
+            background-color: var(--color-gold-hover);
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid var(--color-gold);
+            color: var(--color-gold);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--color-gold);
+            color: #000;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            margin-bottom: 16px;
+        }
+
+        .section-title h2 span {
+            color: var(--color-gold);
+        }
+
+        .section-title p {
+            color: var(--color-text-muted);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* =========================================
+           HEADER
+           ========================================= */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: rgba(17, 17, 17, 0.95);
+            padding: 20px 0;
+            z-index: 1000;
+            border-bottom: 1px solid #333;
+            backdrop-filter: blur(5px);
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #fff;
+        }
+
+        .logo span {
+            color: var(--color-gold);
+        }
+
+        /* =========================================
+           HERO SECTION
+           ========================================= */
+        .hero {
+            padding: 180px 0 120px;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)), url('https://images.unsplash.com/photo-1551818255-e6e10975bc17?q=80&w=1920&auto=format&fit=crop'); /* Placeholder imagem corporativa/segurança */
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 24px;
+            letter-spacing: 1px;
+        }
+
+        .hero h1 span {
+            color: var(--color-gold);
+        }
+
+        .hero-sub {
+            font-size: 1.25rem;
+            color: #e0e0e0;
+            margin-bottom: 32px;
+            font-weight: 300;
+        }
+
+        .hero-bullets {
+            margin-bottom: 40px;
+        }
+
+        .hero-bullets li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px;
+            font-size: 1.1rem;
+        }
+
+        .hero-bullets li i {
+            color: var(--color-gold);
+            margin-right: 12px;
+        }
+
+        .microcopy {
+            display: block;
+            margin-top: 16px;
+            font-size: 0.85rem;
+            color: var(--color-text-muted);
+        }
+
+        /* =========================================
+           CONTEXTO LEGAL
+           ========================================= */
+        .legal-context {
+            padding: var(--section-padding);
+            background-color: var(--color-surface);
+            border-left: 4px solid var(--color-gold);
+        }
+
+        .legal-box {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .legal-warning {
+            background: rgba(204, 168, 116, 0.1);
+            padding: 20px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            color: var(--color-gold);
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+        }
+
+        /* =========================================
+           RISCOS
+           ========================================= */
+        .risks {
+            padding: var(--section-padding);
+        }
+
+        .risk-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .risk-card {
+            background-color: var(--color-surface);
+            padding: 30px;
+            border-radius: 6px;
+            border-top: 2px solid transparent;
+            transition: var(--transition);
+        }
+
+        .risk-card:hover {
+            border-top: 2px solid var(--color-danger);
+            transform: translateY(-5px);
+        }
+
+        .risk-card i {
+            font-size: 2rem;
+            color: var(--color-danger);
+            margin-bottom: 20px;
+        }
+
+        .risk-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+        }
+
+        .risk-card p {
+            color: var(--color-text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* =========================================
+           SOLUÇÃO & PROCESSO
+           ========================================= */
+        .solution {
+            padding: var(--section-padding);
+            background-color: var(--color-surface);
+        }
+
+        .process-steps {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .step {
+            display: flex;
+            align-items: center;
+            background-color: var(--color-bg);
+            padding: 20px;
+            border-radius: 6px;
+            border-left: 3px solid var(--color-gold);
+        }
+
+        .step-number {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--color-gold);
+            margin-right: 20px;
+            min-width: 40px;
+        }
+
+        /* =========================================
+           RESULTADOS (ROI)
+           ========================================= */
+        .roi {
+            padding: var(--section-padding);
+        }
+
+        .roi-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .roi-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+        }
+
+        .roi-item i {
+            color: var(--color-success);
+            margin-top: 5px;
+        }
+
+        /* =========================================
+           PACOTES
+           ========================================= */
+        .pricing {
+            padding: var(--section-padding);
+            background-color: var(--color-surface);
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .pricing-card {
+            background-color: var(--color-bg);
+            padding: 40px;
+            border-radius: 8px;
+            border: 1px solid #333;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .pricing-card.featured {
+            border: 1px solid var(--color-gold);
+            position: relative;
+        }
+
+        .pricing-card.featured::before {
+            content: "MAIS PROCURADO";
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: var(--color-gold);
+            color: #000;
+            padding: 4px 12px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            border-radius: 20px;
+        }
+
+        .price-title {
+            font-size: 1.5rem;
+            color: var(--color-text-muted);
+            margin-bottom: 10px;
+        }
+
+        .price-val {
+            font-size: 3rem;
+            font-family: var(--font-heading);
+            color: #fff;
+            margin-bottom: 20px;
+        }
+
+        .price-val span {
+            font-size: 1rem;
+            color: var(--color-text-muted);
+        }
+
+        .price-features {
+            text-align: left;
+            margin-bottom: 30px;
+            flex-grow: 1;
+        }
+
+        .price-features li {
+            margin-bottom: 12px;
+            color: #ccc;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .price-features li i {
+            color: var(--color-gold);
+            font-size: 0.8rem;
+        }
+
+        /* =========================================
+           PARA QUEM É / NÃO É
+           ========================================= */
+        .target {
+            padding: var(--section-padding);
+        }
+
+        .target-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .target-col h3 {
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #333;
+        }
+
+        .target-col ul li {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* =========================================
+           INSTRUTOR
+           ========================================= */
+        .instructor {
+            padding: var(--section-padding);
+            background-color: var(--color-surface);
+        }
+        
+        .instructor-content {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .instructor-img {
+            width: 150px;
+            height: 150px;
+            background-color: #333;
+            border-radius: 50%;
+            border: 2px solid var(--color-gold);
+            flex-shrink: 0;
+            background-image: url('https://placehold.co/150x150/1a1a1a/c6a87c?text=Instrutor');
+            background-size: cover;
+        }
+
+        /* =========================================
+           FAQ
+           ========================================= */
+        .faq {
+            padding: var(--section-padding);
+        }
+
+        .faq-item {
+            margin-bottom: 20px;
+            border-bottom: 1px solid #333;
+            padding-bottom: 20px;
+        }
+
+        .faq-question {
+            font-weight: 600;
+            color: #fff;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .faq-answer {
+            color: var(--color-text-muted);
+            font-size: 0.95rem;
+        }
+
+        /* =========================================
+           FORMULÁRIO
+           ========================================= */
+        .contact {
+            padding: var(--section-padding);
+            background-color: var(--color-surface);
+        }
+
+        .form-box {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: var(--color-bg);
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+            color: #ccc;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            background-color: #222;
+            border: 1px solid #444;
+            color: #fff;
+            border-radius: 4px;
+            font-family: var(--font-primary);
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--color-gold);
+        }
+
+        .form-feedback {
+            display: none;
+            margin-top: 20px;
+            padding: 15px;
+            background-color: rgba(67, 160, 71, 0.2);
+            color: var(--color-success);
+            text-align: center;
+            border-radius: 4px;
+        }
+
+        /* =========================================
+           RODAPÉ
+           ========================================= */
+        footer {
+            padding: 60px 0 30px;
+            background-color: #000;
+            border-top: 1px solid #222;
+            font-size: 0.85rem;
+            color: #666;
+        }
+
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .disclaimer {
+            padding: 15px;
+            border: 1px solid #222;
+            margin-bottom: 20px;
+        }
+
+        /* =========================================
+           RESPONSIVIDADE
+           ========================================= */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .hero { padding-top: 140px; text-align: center; }
+            .hero-bullets li { justify-content: center; }
+            .target-grid { grid-template-columns: 1fr; }
+            .instructor-content { flex-direction: column; text-align: center; }
+            .header-btn { display: none; } /* Esconde btn whatsapp no header mobile p/ limpar */
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div class="logo">UPF <span>COMPLIANCE</span></div>
+            <a href="https://wa.me/5511999999999?text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20o%20treinamento%20UPF." target="_blank" class="btn btn-outline header-btn">
+                <i class="fab fa-whatsapp"></i> Falar no WhatsApp
+            </a>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Treinamento Corporativo em Uso Progressivo da Força para <span style="color: var(--color-gold);">Adequação Imediata à Lei 14.967/2024</span></h1>
+                <p class="hero-sub">Reduza risco jurídico, evite multas e proteja a autorização da sua operação junto à Polícia Federal.</p>
+                
+                <ul class="hero-bullets">
+                    <li><i class="fas fa-check-circle"></i> In company (dentro da sua empresa)</li>
+                    <li><i class="fas fa-check-circle"></i> Padronização operacional + documentação de apoio</li>
+                    <li><i class="fas fa-check-circle"></i> Treinamento prático com foco em conduta e proporcionalidade</li>
+                </ul>
+
+                <a href="#form-proposta" class="btn">Solicitar Proposta</a>
+                <span class="microcopy">Retorno em até 24h úteis • Proposta sob medida • Emissão de NF</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="legal-context">
+        <div class="container">
+            <div class="section-title">
+                <h2>O que mudou com a Lei <span>14.967/2024</span>?</h2>
+                <p>O cenário legal da segurança privada passou por atualizações críticas.</p>
+            </div>
+            <div class="legal-box">
+                <p>A nova legislação e as normativas vigentes da Polícia Federal aumentaram o rigor na fiscalização sobre a conduta dos agentes de segurança. A responsabilidade civil e penal recai diretamente sobre a gestão e a empresa contratante em casos de excesso ou despreparo.</p>
+                <div class="legal-warning">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <div>
+                        <strong>Aviso Importante:</strong><br>
+                        O não cumprimento das normas de proporcionalidade no uso da força pode acarretar em processos administrativos, multas severas e até a suspensão da autorização de funcionamento da empresa de segurança ou do serviço orgânico.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="risks">
+        <div class="container">
+            <div class="section-title">
+                <h2>O que sua empresa pode <span>perder</span> com um erro operacional</h2>
+            </div>
+            <div class="risk-grid">
+                <div class="risk-card">
+                    <i class="fas fa-gavel"></i>
+                    <h3>Passivo Civil e Penal</h3>
+                    <p>Processos milionários por danos morais e materiais decorrentes de abordagens indevidas ou excesso de força.</p>
+                </div>
+                <div class="risk-card">
+                    <i class="fas fa-file-contract"></i>
+                    <h3>Perda de Contratos</h3>
+                    <p>Exposição negativa na mídia e redes sociais destroem a reputação da empresa, resultando em rescisões imediatas.</p>
+                </div>
+                <div class="risk-card">
+                    <i class="fas fa-search-dollar"></i>
+                    <h3>Sanções da PF</h3>
+                    <p>Falhas em relatórios e procedimentos operacionais expõem a empresa a fiscalizações rigorosas e risco de cassação.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="solution">
+        <div class="container">
+            <div class="section-title">
+                <h2>UPF Compliance Program</h2>
+                <p>Treinamento in company que padroniza conduta e blinda sua operação.</p>
+            </div>
+            
+            <div class="process-steps">
+                <div class="step">
+                    <span class="step-number">01</span>
+                    <div>
+                        <h4>Diagnóstico Rápido</h4>
+                        <p>Reunião de 20 min com o gestor para entender o cenário operacional.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <span class="step-number">02</span>
+                    <div>
+                        <h4>Alinhamento de Objetivos</h4>
+                        <p>Definição das regras de engajamento específicas do posto/cliente.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <span class="step-number">03</span>
+                    <div>
+                        <h4>Treinamento Prático In Company</h4>
+                        <p>Instrução presencial focada em verbalização, defesa e controle.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <span class="step-number">04</span>
+                    <div>
+                        <h4>Padronização</h4>
+                        <p>Correção de vícios operacionais e uniformização de procedimentos.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <span class="step-number">05</span>
+                    <div>
+                        <h4>Entrega e Documentação</h4>
+                        <p>Certificado coletivo, lista de presença e checklist de melhorias.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="roi">
+        <div class="container">
+            <div class="section-title">
+                <h2>Resultados Esperados</h2>
+            </div>
+            <div class="roi-list">
+                <div class="roi-item">
+                    <i class="fas fa-check"></i>
+                    <p>Redução drástica de incidentes críticos</p>
+                </div>
+                <div class="roi-item">
+                    <i class="fas fa-check"></i>
+                    <p>Procedimentos de abordagem padronizados</p>
+                </div>
+                <div class="roi-item">
+                    <i class="fas fa-check"></i>
+                    <p>Segurança jurídica na confecção de relatórios</p>
+                </div>
+                <div class="roi-item">
+                    <i class="fas fa-check"></i>
+                    <p>Equipe alinhada aos Direitos Humanos e Lei</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="pricing">
+        <div class="container">
+            <div class="section-title">
+                <h2>Investimento</h2>
+                <p>Valores para treinamentos realizados no Brasil (custos de deslocamento a combinar fora da base).</p>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3 class="price-title">Até 10 Vigilantes</h3>
+                    <div class="price-val">R$ 5.000<span>,00</span></div>
+                    <ul class="price-features">
+                        <li><i class="fas fa-check"></i> Treinamento Presencial (In Company)</li>
+                        <li><i class="fas fa-check"></i> Material de Apoio Digital</li>
+                        <li><i class="fas fa-check"></i> Certificado Coletivo</li>
+                        <li><i class="fas fa-check"></i> Relatório de Diagnóstico Básico</li>
+                    </ul>
+                    <a href="#form-proposta" class="btn btn-outline" onclick="selectPackage('10')">Solicitar Proposta</a>
+                </div>
+
+                <div class="pricing-card featured">
+                    <h3 class="price-title">Até 20 Vigilantes</h3>
+                    <div class="price-val">R$ 7.500<span>,00</span></div>
+                    <ul class="price-features">
+                        <li><i class="fas fa-check"></i> Treinamento Presencial (In Company)</li>
+                        <li><i class="fas fa-check"></i> Material de Apoio Digital</li>
+                        <li><i class="fas fa-check"></i> Certificado Coletivo</li>
+                        <li><i class="fas fa-check"></i> Relatório de Diagnóstico Completo</li>
+                        <li><i class="fas fa-check"></i> Checklist de Procedimentos</li>
+                    </ul>
+                    <a href="#form-proposta" class="btn" onclick="selectPackage('20')">Solicitar Proposta</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="target">
+        <div class="container">
+            <div class="target-grid">
+                <div class="target-col">
+                    <h3 style="color: var(--color-success)">Ideal Para</h3>
+                    <ul>
+                        <li><i class="fas fa-check" style="color: var(--color-success)"></i> Empresas de Segurança Privada</li>
+                        <li><i class="fas fa-check" style="color: var(--color-success)"></i> Condomínios com Segurança Orgânica</li>
+                        <li><i class="fas fa-check" style="color: var(--color-success)"></i> Gestores preocupados com Compliance</li>
+                    </ul>
+                </div>
+                <div class="target-col">
+                    <h3 style="color: var(--color-danger)">Não é Para</h3>
+                    <ul>
+                        <li><i class="fas fa-times" style="color: var(--color-danger)"></i> Formação inicial de vigilantes (Curso de Formação)</li>
+                        <li><i class="fas fa-times" style="color: var(--color-danger)"></i> Quem busca apenas "papel" sem instrução real</li>
+                        <li><i class="fas fa-times" style="color: var(--color-danger)"></i> Substituição da Reciclagem Oficial (é complementar)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="instructor">
+        <div class="container">
+            <div class="instructor-content">
+                <div class="instructor-img" role="img" aria-label="Foto do Instrutor"></div>
+                <div>
+                    <h3>Instrutoria Especializada</h3>
+                    <p>Nossa equipe é formada por especialistas em Segurança Pública e Privada, com vasta experiência operacional e acadêmica. O foco da instrução não é o militarismo exacerbado, mas a técnica, a legalidade e a conformidade com as normas da Polícia Federal e Direitos Humanos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq">
+        <div class="container">
+            <div class="section-title">
+                <h2>Perguntas Frequentes</h2>
+            </div>
+            <div class="faq-item">
+                <span class="faq-question">O treinamento é 100% In Company?</span>
+                <p class="faq-answer">Sim. Nossos instrutores vão até a sua base ou posto de serviço para treinar a equipe no ambiente real de trabalho.</p>
+            </div>
+            <div class="faq-item">
+                <span class="faq-question">Emite Nota Fiscal?</span>
+                <p class="faq-answer">Sim. Toda prestação de serviço é formalizada com contrato e emissão de Nota Fiscal Eletrônica (NFe) para PJ.</p>
+            </div>
+            <div class="faq-item">
+                <span class="faq-question">Serve como Reciclagem Obrigatória?</span>
+                <p class="faq-answer">Não. Este é um treinamento de qualificação e conformidade específico (extracurricular). Não substitui a reciclagem bienal obrigatória exigida pela PF em escolas de formação.</p>
+            </div>
+            <div class="faq-item">
+                <span class="faq-question">Como adaptar à escala 12x36?</span>
+                <p class="faq-answer">Temos flexibilidade de agenda para dividir as turmas em dias alternados, garantindo que todo o efetivo seja treinado sem desfalcar o posto.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="form-proposta" class="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Solicite uma Proposta</h2>
+                <p>Preencha os dados abaixo. Retornamos em até 24h úteis.</p>
+            </div>
+            
+            <div class="form-box">
+                <form id="proposalForm">
+                    <div class="form-group">
+                        <label for="name">Nome Completo</label>
+                        <input type="text" id="name" class="form-control" required placeholder="Seu nome">
+                    </div>
+                    <div class="form-group">
+                        <label for="company">Empresa / Condomínio</label>
+                        <input type="text" id="company" class="form-control" required placeholder="Nome da organização">
+                    </div>
+                    <div class="form-group">
+                        <label for="role">Cargo</label>
+                        <input type="text" id="role" class="form-control" required placeholder="Ex: Diretor, Gestor, Síndico">
+                    </div>
+                    <div class="form-group">
+                        <label for="whatsapp">WhatsApp</label>
+                        <input type="tel" id="whatsapp" class="form-control" required placeholder="(DD) 99999-9999">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">E-mail Corporativo</label>
+                        <input type="email" id="email" class="form-control" required placeholder="seu@email.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="location">Cidade / UF</label>
+                        <input type="text" id="location" class="form-control" required placeholder="Onde será o treinamento?">
+                    </div>
+                    <div class="form-group">
+                        <label for="pax">Número de Vigilantes</label>
+                        <select id="pax" class="form-control">
+                            <option value="1-10">1 a 10 (Pacote R$ 5k)</option>
+                            <option value="11-20">11 a 20 (Pacote R$ 7.5k)</option>
+                            <option value="21-40">21 a 40</option>
+                            <option value="41+">Acima de 41</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Mensagem (Opcional)</label>
+                        <textarea id="message" rows="3" class="form-control" placeholder="Alguma dúvida específica?"></textarea>
+                    </div>
+                    <button type="submit" class="btn" style="width: 100%;">Enviar Solicitação</button>
+                    
+                    <div id="formFeedback" class="form-feedback">
+                        <strong>Enviado com sucesso!</strong><br>
+                        Nossa equipe comercial entrará em contato em breve.
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="disclaimer">
+                    <p><strong>Aviso Legal:</strong> O conteúdo deste site é informativo. A UPF Compliance Program preza pelo respeito integral aos direitos humanos e à legislação vigente. Não fornecemos instrução para uso de equipamentos proibidos ou técnicas de tortura. Consulte sempre seu departamento jurídico para casos específicos.</p>
+                </div>
+                <div style="text-align: center;">
+                    <p>&copy; 2024 UPF Compliance Program. Todos os direitos reservados.</p>
+                    <p style="color: #444; font-size: 0.75rem; margin-top: 10px;">CNPJ: 00.000.000/0001-00 (Placeholder)</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Função para pré-selecionar o pacote no select do formulário
+        function selectPackage(size) {
+            const select = document.getElementById('pax');
+            if (size === '10') {
+                select.value = '1-10';
+            } else if (size === '20') {
+                select.value = '11-20';
+            }
+        }
+
+        // Validação simples e "envio" do formulário
+        document.getElementById('proposalForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const btn = this.querySelector('button[type="submit"]');
+            const originalText = btn.innerText;
+            
+            // Simula processamento
+            btn.innerText = "Enviando...";
+            btn.disabled = true;
+
+            setTimeout(() => {
+                // Sucesso
+                btn.style.display = 'none';
+                document.getElementById('formFeedback').style.display = 'block';
+                
+                // Reset opcional
+                // this.reset(); 
+            }, 1500);
+        });
+
+        // Smooth Scroll para links internos
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
